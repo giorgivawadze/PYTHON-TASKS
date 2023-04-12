@@ -1,11 +1,19 @@
+import random
+
+number = random.randint(1,99)
 
 
-eating = True
-khinkhali = 0
 
-while eating:
-  khinkhali+=1
-  print (f'gavskdi {khinkhali}')
-  if khinkhali>=10:
-    eating = False
+while True:
+    guess = int(input("Guess the number (between 1 and 99): "))
+
+    if guess == number :
+        print('Congratulations, you guessed the number!')
+        break
+    if guess > number: 
+
+        print('"Your guess is too high, try again.")')
+        break
+    else:
+        print('"Your guess is too low, try again.")')
    
