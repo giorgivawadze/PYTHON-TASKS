@@ -42,6 +42,183 @@ print(dict1)
 
 
 
+# 6-4
+
+
+# 6-5
+
+rivers = {'nile':'egypt', 'amazon':'brazil', 'yangtze':'china'}
+
+# 1
+for key,  value in rivers.items():
+    print('The', key, 'runs through', value)
+
+# 2
+for river in rivers.keys():
+    print(river)   
+
+# 3 
+for country in rivers.values():
+    print(country)
+
+
+#6-6
+
+favorite_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+
+person = ['jen','sarah','edward','phil','john','peter' ]
+
+for people in person:
+    if people in favorite_languages.keys():
+        print(f'Thank you, {people.title()}, for taking the poll!')
+    else:
+        print(f"{people.title()}, we invite you to take our favorite languages poll.")    
+
+
+
+
+# 6-7
+character1 = {'name': 'Peter', 'lastname':'Griffin', 'age': 46, 'city': 'Quahog' }
+character2 = {'name': 'Elliot', 'lastname':'Alderson', 'age': 28, 'city': 'New York City'}
+character3 = {'name': 'Walter', 'lastname':'White', 'age': 52, 'city': 'Albuquerque'}
+
+people = { 
+  'character1': character1,
+  'character2':character2,
+  'character3':character3
+}
+
+print (people ['character1'])
+print (people ['character2'])
+print (people ['character3'])
+
+
+
+# 6-8
+
+
+pets = [
+    {'species':'dog', 'owner':'george'},
+    {'species':'cat', 'owner':'jack'},
+    {'species':'parrot','owner':'elliot'}
+]
+
+for pet in pets:
+    print(f"{pet['owner']}'s pet is a {pet['species']}.")
+
+
+
+# 6-9
+favorite_places = {'george':'gym', 'nick':'school', 'jake': 'university'}
+
+
+for person, place in favorite_places.items():
+   print(f"{person}'s favorite place is {place}.")
+
+
+
+#6-12
+
+
+
+
+
+
+#7-4
+
+toppings = []
+
+
+while True:
+   topping = {input('Enter a pizza topping (enter "quit" to finish):')}
+
+   if topping== "quit":
+       break
+   toppings.append(topping)
+   print(f"adding {topping} to your pizza...")
+
+   print("Your pizza is ready with the following toppings:")
+for topping in toppings:
+    print(f"- {topping}")
+    
+
+
+#7-7
+nums = 1
+
+while nums > 0:
+    print(nums)
+    nums +=1
+
+
+
+# 7-8
+
+sandwich_orders = ["tuna_sandwich", "cheese_sandwich", "ham_sandwich"]
+
+finished_sandwiches = []
+
+for sandwich in sandwich_orders:
+    finished_sandwiches.append(sandwich)
+    print(f"{sandwich.title()}is done.")
+
+
+# 7-10
+poll_response = {}
+
+while True:
+    user = input("What is your name? (Enter 'quit' to exit poll.)")
+
+    if user == 'quit':
+     break
+    response = input("If you could visit one place in the world, where would you go? ")
+    poll_response[user]= response
+print("Poll results:")
+for user, response in poll_response.items():
+    print(f"{user} would like to visit {response}.")
+
+
+# 8-1
+
+def display_message():
+    print("In this chapter, we're learning about functions in Python.")
+
+display_message()
+
+
+# 8-2
+
+def favorite_book(title):
+   print(" One of my favorite books is Alice in Wonderland.") 
+
+favorite_book("Alice_in_Wonderland")   
+
+# 8-3
+
+def make_shirt(size, text):
+   print(f"A {size}-sized shirt will be made with the message: {text}")
+
+make_shirt("medium", "Hello, World!")
+
+make_shirt(size="large", text="Python is awesome!")
+
+
+# 8-5
+def describe_city(city, country="georgia"):
+    print(f"{city} is in {country}")
+
+describe_city("tbilisi")
+describe_city("rome","Italy")
+describe_city("reykjavik", "Iceland")
+
+
+# other tasks
+
 
 sampleDict = {
     "class": {
@@ -192,3 +369,18 @@ room[1][1] = 5
 
 
 print(room)
+
+
+
+
+
+
+
+
+
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+for car in cars:
+ if car == 'bmw':
+    print(car.upper())
+else:
+    print(car.title())
