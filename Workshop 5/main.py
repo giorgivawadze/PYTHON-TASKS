@@ -84,6 +84,10 @@ user1.reset_login_attempts()
 print(user1.login_attempts)
 
 
+from admin import Admin
+my_admin = Admin("John", "Doe", 30, 180)
+my_admin.privileges.show_privileges()
+
 
 
 
