@@ -25,6 +25,7 @@ print(city_country("tokyo", "japan"))
 
 class Dog:
     def __init__(self, name:str) -> None:
+        
         """
         initializer / constructor
         
@@ -139,3 +140,47 @@ print(f"My dog's name is {my_dog.name}.")
 print(f"My dog is {my_dog.age} years old.")    
 my_dog.sit()
 my_dog.roll_over()
+
+
+
+
+
+
+
+
+
+
+
+"""
+f = open('./exercise/data.txt')
+
+print(f.read())
+f.close()
+
+"""
+with open ('./exercise/data.txt') as f:
+    #  print(f.readlines())
+
+    users = [
+    user.strip()
+    for user in f.readlines()
+]
+    print(users)
+    print(f.read)
+print(f.tell())
+f.seek(22)
+
+print(f.readlines())     
+
+print(users)
+print(f.read())
+
+
+
+
+
+
+
+
+
+

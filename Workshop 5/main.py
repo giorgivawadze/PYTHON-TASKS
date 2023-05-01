@@ -1,4 +1,5 @@
-
+from admin import Admin
+import random
 #9-1
 class Restaurant: 
     
@@ -84,7 +85,6 @@ user1.reset_login_attempts()
 print(user1.login_attempts)
 
 
-from admin import Admin
 my_admin = Admin("John", "Doe", 30, 180)
 my_admin.privileges.show_privileges()
 
@@ -93,7 +93,7 @@ my_admin.privileges.show_privileges()
 
 
 #9-13
-import random
+
 class Die:
       def __init__(self, sides=6) -> None:
             self.sides = sides
